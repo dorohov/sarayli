@@ -1,0 +1,69 @@
+.navbar {
+    &__inner {
+        @extend .container;
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        align-items: center;
+    }
+    &__logo {
+        max-width: 126px;
+        width: 100%;
+        margin-right: 55px;
+    }
+    &__menu {
+        ul {
+            display: flex;
+            li {
+                padding: 0 10px;
+                a {
+                    color: $dark-color;
+                    text-decoration: none;
+                    font-size: 18px;
+                    display: block;
+                    padding: 3px 15px;
+                    border: 1px solid transparent;
+                    border-radius: 100px;
+                    transition: .25s all ease;
+                    &:hover {
+                        border-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__right {
+        display: flex;
+    }
+    &__info {
+        margin-left: 75px;
+        ul {
+            display: flex;  
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $dark-color;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                    span {
+                        display: block;
+                        &.is--icon {
+                            margin-right: 7px;
+                            svg {
+                                fill: $secondary-color;
+                            }
+                        }
+                    }
+                }
+                &.is--email {
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+}
