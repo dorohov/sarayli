@@ -1,0 +1,15 @@
+{
+    "sitename": "Sarayli",
+    "phone": "+7(4862) 36-52-59",
+    "phone_link": "84862365259",
+    "email": "info@sarayli.ru",
+    "pages": {
+        "index": "index.html",
+        "catalog": "catalog.html",
+        "product": "product.html",
+        "about": "about.html",
+        "contacts": "contacts.html",
+        "info": "info.html",
+        "basket": "basket.html"
+    }
+}
