@@ -1,0 +1,29 @@
+<div class="catalog">
+    <div class="catalog__inner">
+        <div class="catalog__top">
+            <div class="catalog__heading">Продукция</div>
+            <div class="catalog__tabs">
+                <ul>
+                    <li><a data-tabid="catalog_carousel1" class="_tab-target">Бытовые стремянки</a></li>
+                    <li><a data-tabid="catalog_carousel2" class="_tab-target is--active">Гладильные доски</a></li>
+                    <li><a data-tabid="catalog_carousel3" class="_tab-target">Сушилки для белья</a></li>
+                    <li><a data-tabid="catalog_carousel4" class="_tab-target">Промышленные лестницы</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="catalog__slides">
+            @@include('catalog.line.html', {
+                "id": 1
+            })
+            @@include('catalog.line.html', {
+                "id": 2
+            })
+            @@include('catalog.line.html', {
+                "id": 3
+            })
+            @@include('catalog.line.html', {
+                "id": 4
+            })
+        </div>
+    </div>
+</div>

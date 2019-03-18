@@ -23,3 +23,44 @@ ul {
     padding: 0;
     list-style-type: none;
 }
+
+#overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#000, .5);
+    display: none;
+    z-index: 9000;
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.__bgtext {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: attr(data-bgtext);
+        font-size: 257px;
+        line-height: normal;
+        text-align: center;
+        color: #3A3939;
+        opacity: 0.03;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1075px) {
+    #overlay {
+        &.is--active {
+            display: block;
+        }
+    }
+}

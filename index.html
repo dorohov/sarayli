@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная - Sarayli</title>
+    <link rel="stylesheet" href="dist/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
@@ -22,7 +23,7 @@
                     <ul>
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="catalog.html">Продукция</a></li>
-                        <li><a href="about.html">О компании</a></li>
+                        <li class="is--active"><a href="about.html">О компании</a></li>
                         <li><a href="info.html">Помощь</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
@@ -52,15 +53,528 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="navbar__icons">
+                        <ul>
+                            <li class="is--basket"><a href="basket.html"><svg class="svg-cart-dims svg is--cart">
+                                        <use xlink:href="img/svg/sprites.svg#cart"></use>
+                                    </svg></a></li>
+                            <li class="is--search">
+                                <div class="navbar__icons__search">
+                                    <form action="#">
+                                        <label for="navsearch"><svg class="svg-search-dims svg is--search">
+                                                <use xlink:href="img/svg/sprites.svg#search"></use>
+                                            </svg></label>
+                                        <input type="text" name="navsearch" id="navsearch">
+                                    </form>
+                                </div>
+                                <a><svg class="svg-search-dims svg is--search">
+                                        <use xlink:href="img/svg/sprites.svg#search"></use>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="navbar__mobile__icon">
+                    <button class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__mobile__container">
+            <div class="navbar__mobile__menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="is--active"><a href="catalog.html">Продукция</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="info.html">Помощь</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="basket.html">Корзина</a></li>
+                </ul>
+                <ul class="is--info">
+                    <li class="is--phone">
+                        <a href="tel:84862365259">
+                            <span class="is--icon">
+                                <svg class="svg-phone-dims svg is--phone">
+                                    <use xlink:href="img/svg/sprites.svg#phone"></use>
+                                </svg>
+                            </span>
+                            <span class="is--text">+7(4862) 36-52-59</span>
+                        </a>
+                    </li>
+                    <li class="is--email">
+                        <a href="mailto:info@sarayli.ru">
+                            <span class="is--icon">
+                                <svg class="svg-mail-dims svg is--mail">
+                                    <use xlink:href="img/svg/sprites.svg#mail"></use>
+                                </svg>
+                            </span>
+                            <span class="is--text">info@sarayli.ru</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
 
-    <main></main>
+    <main>
+        <div class="banner">
+            <div class="banner__inner">
+                <div class="banner__left">
+                    <div class="banner__title">Sarayli</div>
+                    <div class="banner__desc">Cтремительно и динамично развивающаяся компания с современным европейским стилем, поддерживающая стабильность и постоянство качества.</div>
+                    <div class="banner__btn">
+                        <a href="about.html" class="btn is--xl">Подробнее</a>
+                    </div>
+                </div>
+                <div class="banner__right">
+                    <div class="banner__img">
+                        <img src="img/banner.png" class="_animate" data-animation="fadeInRight">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog">
+            <div class="catalog__inner">
+                <div class="catalog__top">
+                    <div class="catalog__heading">Продукция</div>
+                    <div class="catalog__tabs">
+                        <ul>
+                            <li><a data-tabid="catalog_carousel1" class="_tab-target">Бытовые стремянки</a></li>
+                            <li><a data-tabid="catalog_carousel2" class="_tab-target is--active">Гладильные доски</a></li>
+                            <li><a data-tabid="catalog_carousel3" class="_tab-target">Сушилки для белья</a></li>
+                            <li><a data-tabid="catalog_carousel4" class="_tab-target">Промышленные лестницы</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="catalog__slides">
+                    <div class="catalog__carousel _tab-container" id="catalog_carousel1">
+                        <div class="catalog__carousel__inner">
+                            <div class="catalog__carousel__container">
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product1.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Вышка-тур</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product4.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Гладильная доска</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__carousel__arrows">
+                                <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                                <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__carousel _tab-container" id="catalog_carousel2">
+                        <div class="catalog__carousel__inner">
+                            <div class="catalog__carousel__container">
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product1.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Вышка-тур</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product4.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Гладильная доска</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__carousel__arrows">
+                                <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                                <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__carousel _tab-container" id="catalog_carousel3">
+                        <div class="catalog__carousel__inner">
+                            <div class="catalog__carousel__container">
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product1.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Вышка-тур</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product4.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Гладильная доска</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__carousel__arrows">
+                                <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                                <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__carousel _tab-container" id="catalog_carousel4">
+                        <div class="catalog__carousel__inner">
+                            <div class="catalog__carousel__container">
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product1.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Вышка-тур</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product4.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Гладильная доска</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product2.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Лестница</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__card__inner">
+                                        <div class="catalog__card__img">
+                                            <a href="product.html"><img src="img/product3.png" alt=""></a>
+                                        </div>
+                                        <div class="catalog__card__art">1306</div>
+                                        <div class="catalog__card__text">Сушилка</div>
+                                        <div class="catalog__card__link">
+                                            <a href="product.html" class="btn">Купить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__carousel__arrows">
+                                <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                                <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
+                                        <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inabout __bgtext" data-bgtext="О компании">
+            <div class="inabout__inner">
+                <div class="inabout__left">
+                    <div class="inabout__heading">О Компании</div>
+                    <div class="inabout__desc">
+                        <p>«SARAYLI» — это стремительно и динамично развивающаяся компания
+                            с современным европейским стилем, поддерживающая стабильность
+                            и постоянство качества.Мы предоставляем Вашему вниманию большой выбор гладильных досок, лестниц-стремянок из металлического профиля, а также промышленных лестниц из алюминиевого профиля. Использовать нашу продукцию удобно как в быту,
+                            так и в профессиональной деятельности.</p>
+                    </div>
+                </div>
+                <div class="inabout__right">
+                    <div class="inabout__video">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                            <span class="is--play"></span>
+                            <img src="img/about.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inpluses">
+            <div class="heading is--center is--normal">
+                <!-- normal, xl -->
+                <div class="heading__top">Почему нужно заказать у нас?</div>
+
+            </div>
+            <div class="inpluses__inner">
+                <ul>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus1.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus2.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus3.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus4.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus5.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inpluses__block">
+                            <div class="inpluses__icon"><img src="img/plus6.svg" alt=""></div>
+                            <div class="inpluses__text">Технический надзор</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer"></footer>
-    <!-- Scripts -->
+    <div id="overlay"></div>
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/jquery.visible.min.js"></script>
+    <script src="dist/js/slick.min.js"></script>
+    <!-- <script src="dist/js/lightslider.min.js"></script> -->
+    <script src="dist/js/jquery.fancybox.min.js"></script>
+    <script src="dist/js/main.js"></script>
 </body>
 
 </html>

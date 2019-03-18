@@ -1,0 +1,34 @@
+<div class="catalog__carousel _tab-container" id="catalog_carousel@@id">
+    <div class="catalog__carousel__inner">
+      <div class="catalog__carousel__container">
+            @@include('catalog.card.html', {
+                "name": "Вышка-тур",
+                "img": "product1.png"
+            })
+            @@include('catalog.card.html', {
+              "name": "Лестница",
+              "img": "product2.png"
+            })
+            @@include('catalog.card.html', {
+                "name": "Сушилка",
+                "img": "product3.png"
+            })
+            @@include('catalog.card.html', {
+                "name": "Гладильная доска",
+                "img": "product4.png"
+            })
+            @@include('catalog.card.html', {
+                "name": "Лестница",
+                "img": "product2.png"
+            })
+            @@include('catalog.card.html', {
+                "name": "Сушилка",
+                "img": "product3.png"
+            })
+      </div>
+      <div class="catalog__carousel__arrows">
+            <button class="is--prev">@@include('../items/svg.html', {"name": "slider_arrow"})</button>
+            <button class="is--next">@@include('../items/svg.html', {"name": "slider_arrow"})</button>
+      </div>
+    </div>
+</div>
