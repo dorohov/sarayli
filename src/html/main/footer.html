@@ -1,3 +1,46 @@
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__logo">
+            <a href="@@pages.index"><img src="img/svg/logo.svg" alt=""></a>
+        </div>
+        <div class="footer__menus">
+            <div class="footer__menu is--one">
+                <div class="footer__menu__title">Продукция</div>
+                <ul>
+                    <li><a href="@@pages.product">Промышленные лестницы</a></li>
+                    <li><a href="@@pages.product">Бытовые стремянки</a></li>
+                    <li><a href="@@pages.product">Гладильные доски</a></li>
+                    <li><a href="@@pages.product">Сушилки для белья</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu is--two">
+                <div class="footer__menu__title">О компании</div>
+                <ul>
+                    <li><a href="@@pages.info">Полезная информация</a></li>
+                    <li><a href="@@pages.about">Производство</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu is--three">
+                <div class="footer__menu__title">Контакты</div>
+                <ul>
+                    <li><a href="@@phone_link">@@phone</a></li>
+                    <li><a href="@@email">@@email</a></li>
+                    <li><span>Московское шоссе, д.137 </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__dorohov">
+                <a class="footer__dorohov__inner" href="https://dorohovdesign.ru/" target="_blank">
+                    <div class="footer__dorohov--text">Сделано в</div>
+                    <div class="footer__dorohov--logo">
+                        @@include('../items/svg.html', {"name": "dorohov"})
+                    </div>
+                </a>
+            </div>
+            <div class="footer__cop">© 2010 - 2018 <br> ООО «Сарайлы-М»</div>
+        </div>
+    </div>
+</footer>
 <div id="overlay"></div>
 @@include('scripts.html')

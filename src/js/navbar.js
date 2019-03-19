@@ -19,5 +19,19 @@
 
         window.addEventListener('resize', getNavbar)
 
+        $(window).scroll(function(e) {
+            setShadowForNavbar($(this).scrollTop())
+        })
+
+        setShadowForNavbar($(window).scrollTop())
+
+        function setShadowForNavbar(height) {
+            if(height > $('.navbar').innerHeight() / 2) {
+                $('.navbar').addClass('is--scroll')
+            }else {
+                $('.navbar').removeClass('is--scroll')
+            }
+        }
+
     })
 })(jQuery);

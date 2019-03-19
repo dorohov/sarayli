@@ -1,0 +1,41 @@
+<div class="catalog__current __bgtext" data-bgtext="Продукция">
+    <div class="catalog__current__inner">
+        <div class="catalog__current__top">
+            <div class="catalog__current__top__left">
+                <h1 class="catalog__current__heading">Профильная лестница-стремянка</h1>
+                <div class="catalog__current__desc">
+                    <div class="catalog__current__desc__title">Основные свойства:</div>
+                    <div class="catalog__current__desc__list">
+                        <ul>
+                            <li>Дополнительная верхняя ступень;</li>
+                            <li>Прямоугольные стальные ножки с гальваническим покрытием;</li>
+                            <li>Простота в обращении;</li>
+                            <li>Прочная упаковка;</li>
+                            <li>Пластиковые колпачки предотвращающие скольжение ножек;</li>
+                            <li>Специальный дизайн ступеней предотвращающее скольжение;</li>
+                            <li>Применение в домашнем обиходе;</li>
+                        </ul>
+                    </div>
+                </div>
+                <form class="catalog__current__cart">
+                    <div class="catalog__current__cart__nums">
+                        <button type="button" class="cat_cur_btn is--minus">@@include('../../items/svg.html', {"name": "minus"})</button>
+                        <input type="text" readonly value="1" class="cat_cur_in">
+                        <button type="button" class="cat_cur_btn is--plus">@@include('../../items/svg.html', {"name": "plus"})</button>
+                    </div>
+                    <div class="catalog__current__cart__btn">
+                        <input type="submit" value="Добавить в корзину" class="btn">
+                    </div>
+                </form>
+            </div>
+            <div class="catalog__current__top__right">
+                <a class="catalog__current__top__img" data-fancybox="product1" href="img/current.png">
+                    <img src="img/current.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('catalog.table.html')
+@@include('../../items/documents.html')
+@@include('../../items/call_form.html')

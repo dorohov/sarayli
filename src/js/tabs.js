@@ -5,8 +5,9 @@
         var slider = $('.catalog__carousel__container').slick({
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 1,
+            slidesToScroll: 4,
             arrows: false,
+            centerMode: true,
             responsive: [
                 {
                     breakpoint: 1380,
@@ -25,6 +26,7 @@
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
+                        centerMode: false,
                     }
                 }
             ]
@@ -47,6 +49,7 @@
         function showTab(id) {
             $(CLASSES.container).removeClass(CLASSES.active)
             activeTab = $(CLASSES.container + '#' + id)
+            // activeTab.css('opacity', '0')
             activeTab.addClass(CLASSES.active)
 
             $(CLASSES.target).removeClass(CLASSES.active)

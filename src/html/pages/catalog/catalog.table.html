@@ -1,0 +1,53 @@
+<div class="catalog__table">
+    <div class="catalog__table__inner">
+        <div class="catalog__table__heading">
+            @@include('../../items/heading.html', {
+                "title": "Технические характеристики",
+                "align": "left",
+                "size": "xs",
+                "sub": false
+            })
+        </div>
+        <div class="catalog__table__wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Код</th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table1"})
+                            Число ступеней
+                        </th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table2"})
+                            Размер продукции
+                        </th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table3"})
+                            Высота площадки
+                        </th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table4"})
+                            Упаковка
+                        </th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table5"})
+                            Вес
+                        </th>
+                        <th>
+                            @@include('../../items/svg.html', {"name": "table6"})
+                            Колличество/м<sup>3</sup>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@for (var i = 0; i < 7; i++) {
+                        @@include('catalog.table.line.html')
+                      }
+                </tbody>
+            </table>
+        </div>
+        <div class="catalog__table__btn">
+            <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="btn is--xl">Смотреть видео</a>
+        </div>
+    </div>
+</div>

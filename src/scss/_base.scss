@@ -42,25 +42,134 @@ ul {
     overflow: hidden;
     &::after {
         content: attr(data-bgtext);
-        font-size: 257px;
+        font-size: 357px;
         line-height: normal;
         text-align: center;
         color: #3A3939;
-        opacity: 0.03;
+        opacity: 0.038;
         left: 0;
         right: 0;
         width: 100%;
         text-align: center;
-        top: 0;
+        top: -10%;
         position: absolute;
         z-index: -1;
     }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    font-weight: normal;
+    tr {
+        th,
+        td {
+            font-weight: normal;
+            color: $dark-color;
+            vertical-align: bottom;
+            svg {
+                fill: $secondary-color;
+            }
+        }
+        th {
+            font-size: 20px;
+        }
+        td {
+            font-size: 18px;
+        }
+    }
+    thead {
+        background: #fff;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+        tr {
+            th {
+                padding: 25px 20px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            border-bottom: 1px solid $primary-color;
+            td {
+                text-align: center;
+                padding: 20px;
+                span.is--msvg {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.fancybox-thumbs {
+    background: $primary-color;
+}
+
+.fancybox-thumbs__list a:before {
+    border-color: $secondary-color;
 }
 
 @media (max-width: 1075px) {
     #overlay {
         &.is--active {
             display: block;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    table {
+        tr {
+            th,
+            td {
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    table {
+        thead,
+        .tmhide {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                background: #fff;
+                box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+                border-bottom: 0;
+                margin-bottom: 30px;
+                padding: 15px;
+                &::before {
+                    content: attr(data-mtitle);
+                    font-weight: bold;
+                    color: $secondary-color;
+                    margin-bottom: 15px;
+                    display: block;
+                    text-align: center;
+                }
+                td {
+                    display: block;
+                    text-align: left;
+                    padding: 10px 5px 10px 45px !important; 
+                    margin-bottom: 15px;
+                    span.is--msvg {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        margin: 0px 0 10px -35px;
+                        &::after {
+                            content: attr(data-mtitle);
+                            padding-left: 10px;
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
         }
     }
 }

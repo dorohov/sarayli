@@ -18,6 +18,10 @@ header {
     left: 0;
     top: 0;
     z-index: 11000;
+    transition: .25s all ease;
+    &.is--scroll {
+        box-shadow: 0 4px 50px rgba(0,0,0,.1);
+    }
     &__inner {
         @extend .container;
         display: flex;

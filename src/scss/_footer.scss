@@ -1,0 +1,123 @@
+.footer {
+    background: #FBFBFB;
+    padding: 60px 0;
+    .footer__inner {
+        @extend .container;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        img {
+            max-width: 122px;
+            height: auto;
+        }
+    }
+    &__menus {
+        display: flex;
+    }
+    &__menu {
+        padding: 0 40px;
+        &__title {
+            color: $dark-color;
+            font-size: 18px;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+        ul {
+            li {
+                a,
+                span {
+                    font-size: 16px;
+                    line-height: normal;
+                    color: #A5A5A5;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                a {
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__dorohov {
+        &__inner {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        &--text {
+            color: $dark-color;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        &--logo {
+            svg {
+                fill: $primary-color;
+            }
+        }
+    }
+    &__cop {
+        font-size: 14px;
+        color: $dark-color;
+    }
+}
+
+@media (max-width: $resp1200) {
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__info {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            flex-flow: wrap;
+            padding-top: 30px;
+        }
+        &__dorohov {
+            order: 1;
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .footer {
+        &__inner {
+            align-items: center;
+        }
+        &__menu {
+            padding: 0;
+            &.is--one,
+            &.is--two {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .footer {
+        &__logo {
+            margin-bottom: 30px;
+        }
+        &__menus {
+            width: 100%;
+        }
+        &__dorohov {
+            &--text {
+                display: none;
+            }
+        }
+    }
+}
