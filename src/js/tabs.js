@@ -2,7 +2,7 @@
     "use strict"
     $(function() {
 
-        var slider = $('.catalog__carousel__container').slick({
+        var slider = $('.catalog__carousel__slider').slick({
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 4,
@@ -54,7 +54,9 @@
 
             $(CLASSES.target).removeClass(CLASSES.active)
             $(CLASSES.target + '[data-tabid="' + id + '"]').addClass(CLASSES.active)
-            $('.catalog__carousel__container').slick('setPosition');
+            if($('.catalog__carousel__slider').length > 0) {
+                $('.catalog__carousel__slider').slick('setPosition');
+            }
         }
 
         $(CLASSES.target).on('click', function() {

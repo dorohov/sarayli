@@ -8,19 +8,19 @@
             "sub_text": "В течение 5 минут с Вами свяжется <br> специалист"
         })
     </div>
-    <form class="form__container">
+    <form class="form__container" data-parsley-validate>
         <div class="form__top">
             <div class="form__group">
                 <label for="field1">Имя</label>
-                <input type="text" name="field1" id="field1" placeholder="Введите имя">
+                <input type="text" name="field1" id="field1" placeholder="Введите имя" required data-parsley-no-focus>
             </div>
             <div class="form__group">
                 <label for="field2">Номер телефона</label>
-                <input type="text" name="field2" id="field2" placeholder="Введите телефон">
+                <input type="text" name="field2" id="field2" class="__phomemask" placeholder="Введите телефон" required data-parsley-no-focus>
             </div>
             <div class="form__group">
                 <label for="field3">E-mail</label>
-                <input type="email" name="field3" id="field3" placeholder="Введите E-mail">
+                <input type="email" name="field3" id="field3" placeholder="Введите E-mail" required data-parsley-no-focus>
             </div>
         </div>
         <div class="form__bottom">

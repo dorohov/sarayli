@@ -1,0 +1,16 @@
+<tr class="is--row @@if(border != 'true') {is--noborder}" data-mtitle="Код @@code">
+    <td class="tmhide"> @@code</td>
+    <td><span class="is--msvg" data-mtitle="Модель"></span> @@text @@if(new_label == 'true') { <span class="is--new">(NEW!)</span> }</td>
+    <td class="is--center">
+        <span class="is--msvg" data-mtitle="Количество"></span> 
+        <div class="table__count">
+            <div class="table__count__inner">
+                <button class="is--minus _checount-button" data-inid="@@id">@@include('../../items/svg.html', {"name": "minus"})</button>
+                <input type="text" readonly value="0" class="_checount-input" data-inid="@@id">
+                <button class="is--plus _checount-button" data-inid="@@id">@@include('../../items/svg.html', {"name": "plus"})</button>
+            </div>
+        </div>
+    </td>
+    <td><span class="is--msvg" data-mtitle="Объем (м3)"></span> 0</td>
+    <td><span class="is--msvg" data-mtitle="Вес (кг)"></span> 0</td>
+</tr>

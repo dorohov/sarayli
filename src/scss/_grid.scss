@@ -5,3 +5,10 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
+@media (max-width: $resp768) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

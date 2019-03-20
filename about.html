@@ -2,6 +2,13 @@
 <html lang="ru">
 
 <head>
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#e18c44">
+    <meta name="theme-color" content="#e18c44">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +18,7 @@
 </head>
 
 <body>
+    <script src="dist/js/loader.js"></script>
     <header>
         <div class="navbar">
             <div class="navbar__inner">
@@ -175,6 +183,81 @@
                 </div>
             </div>
         </div>
+        <div class="shows">
+            <div class="shows__inner">
+                <div class="shows__heading">
+                    <div class="heading is--left is--normal">
+                        <!-- normal, xl -->
+                        <div class="heading__top">Выставки</div>
+
+                    </div>
+                </div>
+                <div class="shows__container">
+                    <ul>
+                        <li>
+                            <a data-fancybox="shows" href="img/conf1.jpg">
+                                <div class="shows__text">Выстовочная конференция Sarayli-Conf. Москва - 2019</div>
+                                <img src="img/conf1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a data-fancybox="shows" href="img/conf2.jpg">
+                                <div class="shows__text">Выстовочная конференция Sarayli-Conf. Москва - 2019</div>
+                                <img src="img/conf2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a data-fancybox="shows" href="img/conf3.jpg">
+                                <div class="shows__text">Выстовочная конференция Sarayli-Conf. Москва - 2019</div>
+                                <img src="img/conf3.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form__heading">
+                <div class="heading is--center is--normal">
+                    <!-- normal, xl -->
+                    <div class="heading__top">Получите всю подробную информацию</div>
+
+                    <div class="heading__sub">Оставьте заявку, мы свяжемся с Вами и рассчитаем стоимость в течение 1 часа!</div>
+
+                </div>
+            </div>
+            <form class="form__container" data-parsley-validate>
+                <div class="form__top">
+                    <div class="form__group">
+                        <label for="field1">Имя</label>
+                        <input type="text" name="field1" id="field1" placeholder="Введите имя" required data-parsley-no-focus>
+                    </div>
+                    <div class="form__group">
+                        <label for="field2">Номер телефона</label>
+                        <input type="text" name="field2" id="field2" class="__phomemask" placeholder="Введите телефон" required data-parsley-no-focus>
+                    </div>
+                    <div class="form__group">
+                        <label for="field3">E-mail</label>
+                        <input type="email" name="field3" id="field3" placeholder="Введите E-mail" required data-parsley-no-focus>
+                    </div>
+                </div>
+                <div class="form__center">
+                    <div class="form__group">
+                        <label for="field4">Ваш комментарий</label>
+                        <input type="email" name="field4" id="field4" placeholder="Введите комментарий" required data-parsley-no-focus>
+                    </div>
+                </div>
+                <div class="form__bottom">
+                    <div class="form__btn">
+                        <input type="submit" value="Отправить" class="btn is--xl">
+                    </div>
+                    <div class="form__text">
+                        Нажимая на кнопку, Вы соглашаетесь с
+                        <a href="#">политикой обработки персональных данных</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer class="footer">
@@ -225,14 +308,11 @@
     </footer>
     <div id="overlay"></div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/jquery.visible.min.js"></script>
-    <script src="dist/js/slick.min.js"></script>
-    <!-- <script src="dist/js/lightslider.min.js"></script> -->
-    <script src="dist/js/jquery.fancybox.min.js"></script>
-    <script src="dist/js/svg4everybody.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();
+        $('form').parsley();
     </script>
 </body>
 

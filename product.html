@@ -2,6 +2,13 @@
 <html lang="ru">
 
 <head>
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#e18c44">
+    <meta name="theme-color" content="#e18c44">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +18,7 @@
 </head>
 
 <body>
+    <script src="dist/js/loader.js"></script>
     <header>
         <div class="navbar">
             <div class="navbar__inner">
@@ -141,11 +149,11 @@
                         </div>
                         <form class="catalog__current__cart">
                             <div class="catalog__current__cart__nums">
-                                <button type="button" class="cat_cur_btn is--minus"><svg class="svg-minus-dims svg is--minus">
+                                <button type="button" class="cat_cur_btn is--minus _checount-button" data-inid="1"><svg class="svg-minus-dims svg is--minus">
                                         <use xlink:href="img/svg/sprites.svg#minus"></use>
                                     </svg></button>
-                                <input type="text" readonly value="1" class="cat_cur_in">
-                                <button type="button" class="cat_cur_btn is--plus"><svg class="svg-plus-dims svg is--plus">
+                                <input type="text" readonly value="1" class="cat_cur_in _checount-input" data-inid="1">
+                                <button type="button" class="cat_cur_btn is--plus _checount-button" data-inid="1"><svg class="svg-plus-dims svg is--plus">
                                         <use xlink:href="img/svg/sprites.svg#plus"></use>
                                     </svg></button>
                             </div>
@@ -412,19 +420,19 @@
 
                 </div>
             </div>
-            <form class="form__container">
+            <form class="form__container" data-parsley-validate>
                 <div class="form__top">
                     <div class="form__group">
                         <label for="field1">Имя</label>
-                        <input type="text" name="field1" id="field1" placeholder="Введите имя">
+                        <input type="text" name="field1" id="field1" placeholder="Введите имя" required data-parsley-no-focus>
                     </div>
                     <div class="form__group">
                         <label for="field2">Номер телефона</label>
-                        <input type="text" name="field2" id="field2" placeholder="Введите телефон">
+                        <input type="text" name="field2" id="field2" class="__phomemask" placeholder="Введите телефон" required data-parsley-no-focus>
                     </div>
                     <div class="form__group">
                         <label for="field3">E-mail</label>
-                        <input type="email" name="field3" id="field3" placeholder="Введите E-mail">
+                        <input type="email" name="field3" id="field3" placeholder="Введите E-mail" required data-parsley-no-focus>
                     </div>
                 </div>
                 <div class="form__bottom">
@@ -488,14 +496,11 @@
     </footer>
     <div id="overlay"></div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/jquery.visible.min.js"></script>
-    <script src="dist/js/slick.min.js"></script>
-    <!-- <script src="dist/js/lightslider.min.js"></script> -->
-    <script src="dist/js/jquery.fancybox.min.js"></script>
-    <script src="dist/js/svg4everybody.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();
+        $('form').parsley();
     </script>
 </body>
 

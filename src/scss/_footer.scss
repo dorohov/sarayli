@@ -1,5 +1,5 @@
 .footer {
-    background: #FBFBFB;
+    background: #F7F7F7;
     padding: 60px 0;
     .footer__inner {
         @extend .container;
@@ -108,6 +108,7 @@
 
 @media (max-width: $resp768) {
     .footer {
+        padding-bottom: 20px;
         &__logo {
             margin-bottom: 30px;
         }

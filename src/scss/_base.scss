@@ -51,9 +51,20 @@ ul {
         right: 0;
         width: 100%;
         text-align: center;
-        top: -10%;
+        top: 0%;
+        line-height: 357px;
         position: absolute;
         z-index: -1;
+    }
+}
+
+@media (max-width: $resp768) {
+    .__bgtext {
+        &::after {
+            font-size: 55px;
+            line-height: 100px;
+            top: 0%;
+        }
     }
 }
 
@@ -62,6 +73,53 @@ table {
     border-collapse: collapse;
     box-sizing: border-box;
     font-weight: normal;
+    .is--center {
+        text-align: center !important;
+        .table__count {
+            justify-content: center;
+        }
+    }
+    &.is--basket {
+        text-align: left;
+        tr {
+            &.is--heading {
+                background: rgba(77, 100, 170, 0.1);
+                border-bottom: 0;
+                margin-top: -1px;
+                td {
+                    font-size: 18px;
+                    color: $primary-color;
+                    text-align: left;
+                }
+            }
+            &.is--noborder {
+                border-bottom: 0;
+            }
+            &.is--row {
+                td {
+                    color: $dark-color;
+                    font-size: 18px;
+                    text-align: left;
+                    span {
+                        &.is--new {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+            &.is--all {
+                td {
+                    font-size: 24px;
+                    text-align: left;
+                    &:first-child {
+                        padding-left: 0;
+                        text-align: left;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
     tr {
         th,
         td {
@@ -100,6 +158,50 @@ table {
             }
         }
     }
+}
+
+.table {
+    &__count {
+        display: flex;
+        &__inner {
+            padding: 5px 0;
+            background: #F9F9F9;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            input[type="text"] {
+                width: 24px;
+                height: 24px;
+                display: block;
+                border-radius: 100%;
+                background: $primary-color;
+                color: #fff;
+                border: none;
+                text-align: center;
+                font-size: 14px;
+            }
+            button {
+                padding: 0 10px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
+.basket__allm {
+    display: none;
+}
+
+.basket__btn {
+    padding-top: 60px;
+    text-align: right;
 }
 
 .fancybox-thumbs {
@@ -142,7 +244,7 @@ table {
                 background: #fff;
                 box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
                 border-bottom: 0;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 padding: 15px;
                 &::before {
                     content: attr(data-mtitle);
@@ -171,5 +273,40 @@ table {
                 }
             }
         }
+        &.is--basket {
+            tbody {
+                tr {
+                    td {
+                        padding: 0 !important;
+                        span {
+                            &.is--msvg {
+                                margin-left: 0;
+                                &::after {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table__count {
+        justify-content: flex-start !important;
+    }
+    .basket__allm {
+        display: block;
+        ul {
+            li {
+                margin-bottom: 10px;
+                font-size: 20px;
+                &.is--first {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .basket__btn {
+        text-align: left;
     }
 }

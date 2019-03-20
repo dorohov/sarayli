@@ -2,6 +2,13 @@
 <html lang="ru">
 
 <head>
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#e18c44">
+    <meta name="theme-color" content="#e18c44">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +18,7 @@
 </head>
 
 <body>
+    <script src="dist/js/loader.js"></script>
     <header>
         <div class="navbar">
             <div class="navbar__inner">
@@ -137,7 +145,7 @@
                     <div class="catalog__slides">
                         <div class="catalog__carousel _tab-container" id="catalog_carousel1">
                             <div class="catalog__carousel__inner">
-                                <div class="catalog__carousel__container">
+                                <div class="catalog__carousel__container  is--normal">
                                     <div class="catalog__card">
                                         <div class="catalog__card__inner">
                                             <div class="catalog__card__img">
@@ -211,19 +219,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog__carousel__arrows">
-                                    <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                    <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="catalog__carousel _tab-container" id="catalog_carousel2">
                             <div class="catalog__carousel__inner">
-                                <div class="catalog__carousel__container">
+                                <div class="catalog__carousel__container  is--normal">
                                     <div class="catalog__card">
                                         <div class="catalog__card__inner">
                                             <div class="catalog__card__img">
@@ -297,19 +298,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog__carousel__arrows">
-                                    <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                    <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="catalog__carousel _tab-container" id="catalog_carousel3">
                             <div class="catalog__carousel__inner">
-                                <div class="catalog__carousel__container">
+                                <div class="catalog__carousel__container  is--normal">
                                     <div class="catalog__card">
                                         <div class="catalog__card__inner">
                                             <div class="catalog__card__img">
@@ -383,19 +377,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog__carousel__arrows">
-                                    <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                    <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="catalog__carousel _tab-container" id="catalog_carousel4">
                             <div class="catalog__carousel__inner">
-                                <div class="catalog__carousel__container">
+                                <div class="catalog__carousel__container  is--normal">
                                     <div class="catalog__card">
                                         <div class="catalog__card__inner">
                                             <div class="catalog__card__img">
@@ -469,14 +456,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="catalog__carousel__arrows">
-                                    <button class="is--prev"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                    <button class="is--next"><svg class="svg-slider_arrow-dims svg is--slider_arrow">
-                                            <use xlink:href="img/svg/sprites.svg#slider_arrow"></use>
-                                        </svg></button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -533,14 +513,11 @@
     </footer>
     <div id="overlay"></div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/jquery.visible.min.js"></script>
-    <script src="dist/js/slick.min.js"></script>
-    <!-- <script src="dist/js/lightslider.min.js"></script> -->
-    <script src="dist/js/jquery.fancybox.min.js"></script>
-    <script src="dist/js/svg4everybody.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();
+        $('form').parsley();
     </script>
 </body>
 

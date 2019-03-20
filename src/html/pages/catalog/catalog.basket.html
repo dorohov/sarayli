@@ -1,0 +1,129 @@
+<div class="basket">
+    <div class="basket__inner">
+        <div class="basket__heading">
+            @@include('../../items/heading.html', {
+                "title": "Корзина",
+                "align": "left",
+                "size": "normal",
+                "sub": false
+            })
+        </div>
+        <div class="basket__table">
+            <table class="is--basket">
+                <thead>
+                    <tr>
+                        <th>Код</th>
+                        <th>Модель</th>
+                        <th class="is--center">Количество</th>
+                        <th>Объем (м<sup>3</sup>)</th>
+                        <th>Вес (кг)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @@include('catalog.basket.heading.html', {
+                        "text": "Металлические стремянки Jackson"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 1,
+                        "code": "1103",
+                        "text": "Стремянка JACKSON 3 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 2,
+                        "code": "1104",
+                        "text": "Стремянка JACKSON 4 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 3,
+                        "code": "1105",
+                        "text": "Стремянка JACKSON 5 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 4,
+                        "code": "1106",
+                        "text": "Стремянка JACKSON 6 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 5,
+                        "code": "1107",
+                        "text": "Стремянка JACKSON 7 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 6,
+                        "code": "1108",
+                        "text": "Стремянка JACKSON 8 ст. (Гальваническое покрытие)",
+                        "border": "false",
+                        "new_label": "true"
+                    })
+                    @@include('catalog.basket.heading.html', {
+                        "text": "Металлические стремянки Стандарт"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 7,
+                        "code": "1603",
+                        "text": "Стремянка SARAYLI 3 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 8,
+                        "code": "1604",
+                        "text": "Стремянка SARAYLI 4 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 9,
+                        "code": "1605",
+                        "text": "Стремянка SARAYLI 5 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 10,
+                        "code": "1606",
+                        "text": "Стремянка SARAYLI 6 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 11,
+                        "code": "1607",
+                        "text": "Стремянка SARAYLI 7 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.line.html', {
+                        "id": 12,
+                        "code": "1608",
+                        "text": "Стремянка SARAYLI 8 ст. (Гальваническое покрытие)",
+                        "border": "true",
+                        "new_label": "false"
+                    })
+                    @@include('catalog.basket.all.html')
+                </tbody>
+            </table>
+            <div class="basket__allm">
+                <ul>
+                    <li class="is--first">Итого</li>
+                    <li>Количество: 0</li>
+                    <li>Объем: 0 м <sup>3</sup></li>
+                    <li>Вес: 0 (кг)</li>
+                </ul>
+            </div>
+            <div class="basket__btn">
+                <a href="#" class="btn is--xl">оформить заказ</a>
+            </div>
+        </div>
+    </div>
+</div>

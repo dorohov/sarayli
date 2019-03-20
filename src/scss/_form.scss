@@ -70,6 +70,35 @@
     }
 }
 
+.parsley-errors-list {
+    &.filled {
+        margin-top: 10px;
+        padding: 10px;
+        background: $secondary-color;
+        position: relative;
+        display: inline-block;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+        &::after {
+            bottom: 100%;
+            left: 20px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(225, 140, 68, 0);
+            border-bottom-color: $secondary-color;
+            border-width: 5px;
+            margin-left: -5px;
+            box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+        }
+        li {
+            color: #fff;
+        }
+    }
+}
+
 @media (max-width: $resp1200) {
     .form {
         &__container {
@@ -85,6 +114,7 @@
 
 @media (max-width: $resp768) {
     .form {
+        margin-bottom: 50px;
         &__heading {
             margin-bottom: 40px;
         }

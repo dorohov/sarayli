@@ -1,6 +1,6 @@
 <div class="catalog__carousel _tab-container" id="catalog_carousel@@id">
     <div class="catalog__carousel__inner">
-      <div class="catalog__carousel__container">
+      <div class="catalog__carousel__container @@if(slider == 'true') {catalog__carousel__slider} @@if(slider == 'false'){is--normal}">
             @@include('catalog.card.html', {
                 "name": "Вышка-тур",
                 "img": "product1.png"
@@ -26,9 +26,11 @@
                 "img": "product3.png"
             })
       </div>
-      <div class="catalog__carousel__arrows">
+      @@if(slider == 'true') {
+        <div class="catalog__carousel__arrows">
             <button class="is--prev">@@include('../items/svg.html', {"name": "slider_arrow"})</button>
             <button class="is--next">@@include('../items/svg.html', {"name": "slider_arrow"})</button>
-      </div>
+        </div>
+      }
     </div>
 </div>
