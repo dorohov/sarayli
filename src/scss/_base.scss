@@ -79,6 +79,15 @@ table {
             justify-content: center;
         }
     }
+    .catalog__table__iconset {
+        display: flex;
+        align-items: center;
+        span {
+            line-height: 20px;
+            display: block;
+            margin-left: 5px;
+        }
+    }
     &.is--basket {
         text-align: left;
         tr {
@@ -126,6 +135,7 @@ table {
             font-weight: normal;
             color: $dark-color;
             vertical-align: bottom;
+            vertical-align: middle;
             svg {
                 fill: $secondary-color;
             }
@@ -186,6 +196,8 @@ table {
                 border: none;
                 cursor: pointer;
                 outline: none;
+                display: flex;
+                height: 100%;
                 svg {
                     width: 10px;
                     height: 10px;

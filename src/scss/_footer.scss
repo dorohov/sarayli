@@ -70,6 +70,7 @@
     &__cop {
         font-size: 14px;
         color: $dark-color;
+        padding-bottom: 40px;
     }
 }
 
@@ -87,6 +88,9 @@
         }
         &__dorohov {
             order: 1;
+        }
+        &__cop {
+            padding-bottom: 0;
         }
     }
 }
