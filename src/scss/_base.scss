@@ -180,8 +180,8 @@ table {
             display: flex;
             align-items: center;
             input[type="text"] {
-                width: 24px;
-                height: 24px;
+                width: 30px;
+                height: 30px;
                 display: block;
                 border-radius: 100%;
                 background: $primary-color;
@@ -189,6 +189,7 @@ table {
                 border: none;
                 text-align: center;
                 font-size: 14px;
+                outline: none;
             }
             button {
                 padding: 0 10px;

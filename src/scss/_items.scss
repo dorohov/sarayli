@@ -237,6 +237,9 @@
                     max-width: 240px;
                 }
             }
+            &__slider {
+                display: none;
+            }
         }
         &__heading {
             font-size: 64px;
