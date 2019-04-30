@@ -216,13 +216,14 @@
         &__top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: flex-start;
             padding: 90px 0;
             &__left {
                 max-width: 570px;
             }
             &__right {
                 margin-left: 30px;
+                padding-top: 80px;
             }
             &__img {
                 width: 570px;
@@ -852,6 +853,7 @@
                 flex-flow: wrap;
                 &__right {
                     margin: 0 auto 50px auto;
+                    padding-top: 0;
                 }
                 &__left {
                     order: 1;
