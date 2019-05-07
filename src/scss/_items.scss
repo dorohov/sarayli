@@ -200,7 +200,7 @@
             color: $dark-color;
             text-align: center;
             margin-bottom: 40px;
-            min-height: 62px;
+            min-height: 93px;
         }
         &__link {
             text-align: center;
@@ -638,6 +638,9 @@
                         }
                     }
                 }
+            }
+            .is--hidden {
+                display: none;
             }
         }
     }
