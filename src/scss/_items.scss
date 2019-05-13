@@ -253,7 +253,9 @@
                 }
                 img {
                     transition: .25s all ease;
-                    max-width: 240px;
+                    // max-width: 240px;
+                    max-width: 100%;
+                    width: auto;
                 }
             }
             &__slider {
