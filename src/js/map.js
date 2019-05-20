@@ -181,4 +181,11 @@ function initMap() {
         }
     ]
   });
+  var icon = window.location.origin + '/img/marker.png';
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(53.003318, 36.138263),
+                icon: icon,
+                map: map
+            });
 }
